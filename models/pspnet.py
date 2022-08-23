@@ -52,7 +52,7 @@ class PSPNet(M.Module):
             layers=50,
             bins=(1, 2, 3, 6),
             dropout=0.1,
-            classes=2,
+            classes=19,
             zoom_factor=8,
             use_ppm=True,
             criterion=None
