@@ -54,7 +54,7 @@ modelhub = hub.import_module(
     repo_info='asthestarsfalll/PSPNet-MegEngine:main', git_host='github.com')
 
 # load pretrained model
-pretrained_model = modelhub.resnet50(pretrained=True)
+pretrained_model = modelhub.pspnet50(pretrained=True)
 ```
 
 Way 2:
@@ -63,7 +63,7 @@ Way 2:
 from  megengine import hub
 
 # load pretrained model 
-model_name = 'resnet50'
+model_name = 'pspnet50'
 pretrained_model = hub.load(
     repo_info='asthestarsfalll/PSPNet-MegEngine:main', entry=model_name, git_host='github.com', pretrained=True)
 ```
@@ -71,9 +71,9 @@ pretrained_model = hub.load(
 For those models which do not have pretrained model online, you need to convert weights mannaly, and load the model without pretrained weights like this:
 
 ```python
-model = modelhub.resnet50()
+model = modelhub.pspnet50()
 # or
-model_name = 'resnet50'
+model_name = 'pspnet50'
 model = hub.load(
     repo_info='asthestarsfalll/PSPNet-MegEngine:main', entry=model_name, git_host='github.com')
 ```
